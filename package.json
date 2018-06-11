@@ -15,9 +15,11 @@
   "devDependencies": {},
   "dependencies": {
     "body-parser": "^1.18.3",
+    "bulma": "^0.7.1",
     "concurrently": "^3.5.1",
     "express": "^4.16.2",
     "mongoose": "^5.1.4",
-    "nodemon": "^1.14.7"
+    "nodemon": "^1.14.7",
+    "reactbulma": "^3.0.4"
   }
 }

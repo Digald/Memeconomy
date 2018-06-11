@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import 'bulma/css/bulma.css';
 import rootReducer from "./rootReducer";
 import { Provider } from "react-redux";
 import { applyMiddleware, createStore } from "redux";
