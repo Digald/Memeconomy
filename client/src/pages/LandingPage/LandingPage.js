@@ -11,7 +11,7 @@ const LandingPage = () => (
         <div className="column">
           <TitleLogo />
         </div>
-        <div className="column is-2">
+        <div className="column is-3">
           <TopRightNav />
         </div>
       </div>

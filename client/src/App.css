@@ -2,3 +2,7 @@
     font-family: 'Switch';
     src: url('./nintendo_switch.ttf');
 }
+
+body {
+    font-family: 'Switch';
+}
