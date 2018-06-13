@@ -1,23 +1,30 @@
 import React, { Component } from "react";
 import { Level } from "reactbulma";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { tick } from "./actions";
+// import { connect } from "react-redux";
+// import { bindActionCreators } from "redux";
+// import { tick } from "./actions";
 import Moment from "react-moment";
 import "./TopRightNav.css";
 
 class TopRightNav extends Component {
+  state = {
+    currentTime: Date.now()
+  }
 
   componentWillMount() {
-    setInterval(() => this.props.tick(), 1000);
+    setInterval(() => this.tick(), 1000);
+  }
+
+  tick() {
+    this.setState({CurrentTime: Date.now()})
   }
 
   render() {
     return (
       <div className="TopRightNav">
         <Level>
-          <Moment format="h : mm ss A">{this.props.time}</Moment>
+          <Moment format="h : mm A">{this.state.time}</Moment>
           <p>{this.props.currency || 0} MJ's</p>
           {this.props.loggedIn ? (
             <p>User's Avatar here</p>
@@ -32,13 +39,4 @@ class TopRightNav extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  time: state.currentTime.currentTime
-});
-
-const mapDispatchToProps = dispatch => bindActionCreators({ tick }, dispatch);
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TopRightNav);
+export default TopRightNav;

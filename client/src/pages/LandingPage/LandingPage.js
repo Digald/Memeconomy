@@ -1,25 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
 import { Container } from "reactbulma";
 import "./LandingPage.css";
 import TitleLogo from "../../Components/TitleLogo/TitleLogo.js";
 import TopRightNav from "../../Components/TopRightNav/TopRightNav";
 
-const LandingPage = () => (
-  <div className="page-wrapper">
-    <Container fluid>
-      <div className="columns">
-        <div className="column">
-          <TitleLogo />
-        </div>
-        <div className="column is-3">
-          <TopRightNav />
-        </div>
+class LandingPage extends Component {
+  
+  componentDidMount() {
+    document.title = 'Welcome to Memeconomy';
+  }
+
+  render() {
+    return (
+      <div className="page-wrapper">
+        <Container fluid>
+          <div className="columns">
+            <div className="column">
+              <TitleLogo />
+            </div>
+            <div className="column is-3">
+              <TopRightNav />
+            </div>
+          </div>
+          <div className="columns" />
+          <div className="columns" />
+          <div className="columns" />
+        </Container>
       </div>
-      <div className="columns" />
-      <div className="columns" />
-      <div className="columns" />
-    </Container>
-  </div>
-);
+    );
+  }
+}
 
 export default LandingPage;
