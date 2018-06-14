@@ -18,7 +18,7 @@ class LandingPage extends Component {
             <div className="column">
               <TitleLogo />
             </div>
-            <div className="column is-3">
+            <div className="column is-2">
               <TopRightNav />
             </div>
           </div>

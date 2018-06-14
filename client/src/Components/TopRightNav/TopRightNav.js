@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Level } from "reactbulma";
 import { Link } from "react-router-dom";
-// import { connect } from "react-redux";
-// import { bindActionCreators } from "redux";
-// import { tick } from "./actions";
 import Moment from "react-moment";
 import "./TopRightNav.css";
 
