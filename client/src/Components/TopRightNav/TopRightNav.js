@@ -20,7 +20,7 @@ class TopRightNav extends Component {
   render() {
     return (
       <div className="TopRightNav">
-        <Level>
+        <Level mobile>
           <Moment format="h : mm A">{this.state.time}</Moment>
           <p>{this.props.currency || 0} MJ's</p>
           {this.props.loggedIn ? (
