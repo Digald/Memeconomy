@@ -23,7 +23,10 @@ mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/memeconomy");
 
 // Add routes, both API and view
-app.use("/", routes);
+app.get('/api', (req, res) => {
+  res.json({hello: 'world'});
+});
+app.use('/', routes);
 
 // Start the API server
 app.listen(PORT, function() {
