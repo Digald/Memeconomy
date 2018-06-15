@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Meme Stocks",
+    "description": "The place to check out the current value of memes.",
+    "preview": "",
+    "URI": "/memestocks"
+  },
+  {
+    "name": "Meme Shop",
+    "description": "Buy, sell, and share your favorite memes for mamximum profit!",
+    "preview": "",
+    "URI": "/memeshop"
+  },
+  {
+    "name": "Chat",
+    "description": "Chat with others in the community about anything you want.",
+    "preview": "",
+    "URI": "/memechat"
+  }
+]
