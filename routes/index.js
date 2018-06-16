@@ -5,7 +5,7 @@ const pagesController = require('../controllers/pagesController');
 
 
 // API routes
-router.get('/api/page', pagesController.getPages);
+router.get('/api/pages', pagesController.getPages);
 
 // serve html file for react
 // router.use(function(req, res) {
