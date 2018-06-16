@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const Pages = require("../models/Pages.js");
 
-exports.getPages = (req, res) => {
-  const availablePages = Pages.find();
+exports.getPages = async (req, res) => {
+  const availablePages = await Pages.find();
   console.log(availablePages);
   res.json(availablePages);
 };
