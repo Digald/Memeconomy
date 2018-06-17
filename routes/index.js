@@ -8,8 +8,8 @@ const pagesController = require('../controllers/pagesController');
 router.get('/api/pages', pagesController.getPages);
 
 // serve html file for react
-// router.use(function(req, res) {
-//     res.sendFile(path.join(__dirname, "../client/build/index.html"));
-// });
+router.use(function(req, res) {
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 
 module.exports = router;
