@@ -1,0 +1,9 @@
+.PageScroll {
+    margin-left: 10%;
+    border: 2px solid black;
+    display: block;
+    overflow-y: auto;
+    height: 400px;
+    width: 100%;
+}
+

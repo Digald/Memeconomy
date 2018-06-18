@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getPages } from "./actions";
+import './PageScroll.css';
 
 class PageScroll extends Component {
   componentDidMount() {
@@ -10,7 +11,11 @@ class PageScroll extends Component {
   render() {
     const { pages } = this.props;
     return (
-      <div className="PageScroll">{pages.map(page => <p>{page.name}</p>)}</div>
+      <div className="PageScroll">
+        {pages.map(page =>
+          <div className={page.name} key={page._id}>{page.name}</div>
+        )}
+      </div>
     );
   }
 }
