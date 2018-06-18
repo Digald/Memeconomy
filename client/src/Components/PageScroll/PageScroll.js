@@ -1,12 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { getPages } from "./actions";
 
-const PageScroll = () => (
-  <div className="PageScroll section">
-    Map out the list of website pages here. On hover or focus will display their
-    title. Map out the list of website pages here. On hover or focus will
-    display their title.Map out the list of website pages here. On hover or
-    focus will display their title.
-  </div>
-);
+class PageScroll extends Component {
+  componentDidMount() {
+    this.props.getPages();
+  }
+  render() {
+    const { pages } = this.props;
+    return (
+      <div className="PageScroll">{pages.map(page => <p>{page.name}</p>)}</div>
+    );
+  }
+}
 
-export default PageScroll;
+const mapStateToProps = state => ({
+  pages: state.pages.pagesToBeDisplayed
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ getPages }, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PageScroll);
