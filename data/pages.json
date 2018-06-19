@@ -1,50 +1,58 @@
 [
   {
+    "number": 1,
     "name": "Meme Stocks",
     "description": "The place to check out the current value of memes.",
     "preview": "",
     "URI": "/memestocks"
   },
   {
+    "number": 2,
     "name": "Meme Shop",
     "description": "Buy, sell, and share your favorite memes for mamximum profit!",
     "preview": "",
     "URI": "/memeshop"
   },
   {
+    "number": 3,
     "name": "Chat",
     "description": "Chat with others in the community about anything you want.",
     "preview": "",
     "URI": "/memechat"
   },
   {
-    "name": "Chat",
-    "description": "Chat with others in the community about anything you want.",
+    "number": 4,
+    "name": "",
+    "description": "",
     "preview": "",
-    "URI": "/memechat"
+    "URI": ""
   },
   {
-    "name": "Chat",
-    "description": "Chat with others in the community about anything you want.",
+    "number": 5,
+    "name": "",
+    "description": "",
     "preview": "",
-    "URI": "/memechat"
+    "URI": ""
   },
   {
-    "name": "Chat",
-    "description": "Chat with others in the community about anything you want.",
+    "number": 6,
+    "name": "",
+    "description": "",
     "preview": "",
-    "URI": "/memechat"
+    "URI": ""
   },
   {
-    "name": "Chat",
-    "description": "Chat with others in the community about anything you want.",
+    "number": 7,
+    "name": "",
+    "description": "",
     "preview": "",
-    "URI": "/memechat"
+    "URI": ""
   },
   {
-    "name": "Chat",
-    "description": "Chat with others in the community about anything you want.",
+    "number": 8,
+    "name": "",
+    "description": "",
     "preview": "",
-    "URI": "/memechat"
+    "URI": ""
   }
 ]
