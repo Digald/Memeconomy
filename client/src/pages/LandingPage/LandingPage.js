@@ -23,9 +23,9 @@ class LandingPage extends Component {
             </div>
           </div>
         </Container>
-          <div className="columns">
-            <PageScroll />
-          </div>
+        <div className="columns">
+          <PageScroll />
+        </div>
         <div className="columns" />
         <div className="columns" />
       </div>
