@@ -1,16 +1,24 @@
 .PageScroll {
-    margin-left: 10%;
-    border: 2px solid black;
-    display: block;
-    overflow: auto;
-    height: 400px;
-    width: 100%;
-    position: absolute;
+  border: 1px solid black;
+  padding: 10px 95px;
+  white-space: nowrap;
+  display: block;
+  overflow: auto;
+  width: 100%;
+
 }
 
+
+
 .single-page {
-    border: 2px solid red;
-    display: inline-block;
-    height: 100%;
-    width: 400px;
+  border: 1px solid red;
+  display: inline-block;
+  height: 255px;
+  width: 255px;
+  margin: 0 7px;
+}
+
+.PageScroll::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
 }
