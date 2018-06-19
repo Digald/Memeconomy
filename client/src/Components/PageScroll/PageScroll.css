@@ -7,3 +7,9 @@
     width: 100%;
 }
 
+.single-page {
+    border: 2px solid red;
+    display: inline-block;
+    height: 100%;
+    width: 400px;
+}

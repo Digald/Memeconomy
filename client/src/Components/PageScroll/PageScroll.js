@@ -13,7 +13,7 @@ class PageScroll extends Component {
     return (
       <div className="PageScroll">
         {pages.map(page =>
-          <div className={page.name} key={page._id}>{page.name}</div>
+          <div className="single-page" key={page._id}>{page.name}</div>
         )}
       </div>
     );
