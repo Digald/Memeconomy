@@ -3,7 +3,7 @@ import { Container } from "reactbulma";
 import "./LandingPage.css";
 import TitleLogo from "../../Components/TitleLogo/TitleLogo.js";
 import TopRightNav from "../../Components/TopRightNav/TopRightNav";
-import PageScroll from "../../Components/PageScroll/PageScroll";
+import PageCards from "../../Components/PageCards/PageCards";
 
 class LandingPage extends Component {
   componentDidMount() {
@@ -24,7 +24,7 @@ class LandingPage extends Component {
           </div>
         </Container>
         <div className="columns">
-          <PageScroll />
+          <PageCards />a
         </div>
         <div className="columns" />
         <div className="columns" />

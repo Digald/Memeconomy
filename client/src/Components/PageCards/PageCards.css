@@ -1,5 +1,5 @@
-.PageScroll {
-  /* border: 1px solid black; */
+.PageCards {
+  border: 1px solid black;
   padding: 10px 95px;
   white-space: nowrap;
   display: block;
@@ -8,8 +8,8 @@
   width: 100%;
 }
 
-.gametitle {
-  /* border: 1px solid red; */
+.individual-card {
+  border: 2px solid red;
   display: inline-block;
 }
 .single-page {
@@ -25,6 +25,6 @@
 }
 
 /* I wanted the list of pages to scroll without the scrollbar but for now I would have to leave it because the mouse wheel doesn't scroll horizontally with it. */
-/* .PageScroll::-webkit-scrollbar {
+/* .PageCards::-webkit-scrollbar {
   height: 100px;
 } */
