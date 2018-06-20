@@ -14,11 +14,14 @@ class PageScroll extends Component {
     return (
       <div className="PageScroll">
         {pages.map(page => (
-          <Link to={page.URI}>
-            <div className="single-page" key={page._id}>
-              {page.preview}
-            </div>
-          </Link>
+          <div className="gametitle">
+            {page.name}
+            <Link to={page.URI}>
+              <div className="single-page" key={page._id}>
+                {page.preview}
+              </div>
+            </Link>
+          </div>
         ))}
       </div>
     );
