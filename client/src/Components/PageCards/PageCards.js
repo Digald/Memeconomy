@@ -7,11 +7,12 @@ import "./PageCards.css";
 
 /*
 Pagecards includes all the boxes inside the horizontal scroll including the titles and styles for it.
+Probably need to refactor the conditional rendering somehow. The operator takes up a lot of space inside a small amount of space.
 */
 
 class PageCards extends Component {
   state = {
-    currentHover: 0
+    currentHover: 1
   };
 
   componentDidMount() {
@@ -35,9 +36,18 @@ class PageCards extends Component {
             )}
             <Link
               to={page.URI}
+              onPointerOver={() => this.handleMouseOver(page.number)} 
               onMouseOver={() => this.handleMouseOver(page.number)}
             >
-              <div className="page-link">{page.preview}</div>
+              <div
+                className={
+                  this.state.currentHover === page.number
+                    ? "page-link page-border"
+                    : "page-link"
+                }
+              >
+                {page.preview}
+              </div>
             </Link>
           </div>
         ))}

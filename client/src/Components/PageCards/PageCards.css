@@ -32,15 +32,12 @@
   margin: 0 7px;
 }
 
-.page-link:hover {
-  border: 4px solid cyan;
-}
-
 .page-border {
   border: 4px solid cyan;
 }
 
 /* I wanted the list of pages to scroll without the scrollbar but for now I would have to leave it because the mouse wheel doesn't scroll horizontally with it. */
 /* .PageCards::-webkit-scrollbar {
-  height: 100px;
+  height: 0px;
+  width: 0px;
 } */
