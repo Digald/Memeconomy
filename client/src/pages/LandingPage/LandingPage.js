@@ -5,6 +5,10 @@ import TitleLogo from "../../Components/TitleLogo/TitleLogo.js";
 import TopRightNav from "../../Components/TopRightNav/TopRightNav";
 import PageCards from "../../Components/PageCards/PageCards";
 
+/*
+Landing page is going to be the front of my application. The page will consist of the basic UI of the nintendo switch and will handle all the sites navigation through the boxes displayed in the middle of the screen.
+*/
+
 class LandingPage extends Component {
   componentDidMount() {
     document.title = "Welcome to Memeconomy";

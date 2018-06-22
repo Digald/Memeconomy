@@ -11,11 +11,15 @@ Pagecards includes all the boxes inside the horizontal scroll including the titl
 
 class PageCards extends Component {
   state = {
-    isHovering: false
+    currentHover: 0
   };
 
   componentDidMount() {
     this.props.getPages();
+  }
+
+  handleMouseOver(num) {
+    this.setState({ currentHover: num });
   }
 
   render() {
@@ -24,8 +28,15 @@ class PageCards extends Component {
       <div className="PageCards">
         {pages.map(page => (
           <div className="individual-card" key={page._id}>
-            <p className="page-title">{page.name}</p>
-            <Link to={page.URI}>
+            {this.state.currentHover === page.number ? (
+              <p className="page-title">{page.name}</p>
+            ) : (
+              <p className="page-title" />
+            )}
+            <Link
+              to={page.URI}
+              onMouseOver={() => this.handleMouseOver(page.number)}
+            >
               <div className="page-link">{page.preview}</div>
             </Link>
           </div>
