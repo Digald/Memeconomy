@@ -1,5 +1,5 @@
 .PageCards {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 10px 95px;
   white-space: nowrap;
   display: block;
@@ -9,10 +9,21 @@
 }
 
 .individual-card {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: inline-block;
 }
-.single-page {
+
+.page-title {
+  margin-left: 10px;
+  font-weight: bold;
+  color: cyan;
+  overflow: hidden;
+  max-height: 25px;
+  /* border: 2px solid blue; */
+  /* visibility: hidden; */
+}
+
+.page-link {
   border: 4px solid white;
   padding: 5px;
   height: 255px;
@@ -20,7 +31,7 @@
   margin: 0 7px;
 }
 
-.single-page:hover {
+.page-link:hover {
   border: 4px solid cyan;
 }
 

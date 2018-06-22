@@ -4,6 +4,10 @@ import { Level } from "reactbulma";
 import logo from "./logo.png";
 import "./TitleLogo.css";
 
+/*
+TitleLogo is the top left of the page which includes the logo for the site and the site title
+*/
+
 const TitleLogo = () => (
   <div className="TitleLogo">
     <Level>

@@ -4,17 +4,21 @@ import { Link } from "react-router-dom";
 import Moment from "react-moment";
 import "./TopRightNav.css";
 
+/*
+TopRightNav includes the very top right elements on the page. The time, number of meme jewels, and the log in button are included.
+*/
+
 class TopRightNav extends Component {
   state = {
     currentTime: Date.now()
-  }
+  };
 
   componentWillMount() {
     setInterval(() => this.tick(), 1000);
   }
 
   tick() {
-    this.setState({CurrentTime: Date.now()})
+    this.setState({ CurrentTime: Date.now() });
   }
 
   render() {
