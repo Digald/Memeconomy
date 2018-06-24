@@ -4,6 +4,7 @@ import "./LandingPage.css";
 import TitleLogo from "../../Components/TitleLogo/TitleLogo.js";
 import TopRightNav from "../../Components/TopRightNav/TopRightNav";
 import PageCards from "../../Components/PageCards/PageCards";
+import MenuIcons from "../../Components/MenuIcons/MenuIcons";
 
 /*
 Landing page is going to be the front of my application. The page will consist of the 
@@ -30,9 +31,13 @@ class LandingPage extends Component {
           </div>
         </Container>
         <div className="columns">
-          <PageCards />a
+          <PageCards />
         </div>
-        <div className="columns" />
+        <div className="columns">
+          <div className="column">
+            <MenuIcons />
+          </div>
+        </div>
         <div className="columns" />
       </div>
     );
