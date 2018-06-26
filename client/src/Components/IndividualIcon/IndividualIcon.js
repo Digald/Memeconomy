@@ -8,9 +8,9 @@ circular background.
 */
 
 const IndividualIcon = (props) => (
-    <div className="column is-1">
-        <img src={props.icon} alt={props.alt}/>
-        <p>{props.name}</p>
+    <div className="icon-display column is-1">
+        <img className="icons" src={props.icon} alt={props.alt}/>
+        <p className="icon-name">{props.name}</p>
     </div>
 );
 
