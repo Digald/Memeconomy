@@ -1,5 +1,4 @@
 .PageCards {
-  /* border: 1px solid black; */
   padding: 10px 95px;
   white-space: nowrap;
   display: block;
@@ -9,7 +8,6 @@
 }
 
 .individual-card {
-  /* border: 2px solid red; */
   display: inline-block;
   text-align: center;
 }
@@ -18,11 +16,9 @@
   font-size: 18px;
   margin: 0 0 10px 10px;
   font-weight: bold;
-  color: cyan;
+  color: turquoise;;
   overflow: hidden;
   height: 25px;
-  /* border: 2px solid blue; */
-  /* visibility: hidden; */
 }
 
 .page-link {
@@ -34,7 +30,16 @@
 }
 
 .page-border {
-  border: 4px solid cyan;
+  /* border: 4px solid cyan; */
+  animation-name: borderChange;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes borderChange {
+  0% {border: 4px solid cyan;}
+  50% {border: 4px solid turquoise;}
+  100% {border: 4px solid cyan;}
 }
 
 /* I wanted the list of pages to scroll without the scrollbar but for now I would have to leave it because the mouse wheel doesn't scroll horizontally with it. */
