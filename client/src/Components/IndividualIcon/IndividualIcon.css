@@ -9,9 +9,19 @@
     padding: 20px;
     background-color: white;
     width: 100px;
-    height: 100px;
+    height: auto;
 }
 
 .icons {
    height: 50px;
+}
+
+.icon-name {
+    padding: 15px;
+}
+
+@media screen and (max-width: 767px) {
+    .icon-whole-display {
+        margin: 0;
+    }
 }
