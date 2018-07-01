@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { getPages } from "./actions";
+import { getPages, handleMouseOver } from "./actions";
 import "./PageCards.css";
 
 /*
@@ -11,37 +11,29 @@ Probably need to refactor the conditional rendering somehow. The operator takes 
 */
 
 class PageCards extends Component {
-  state = {
-    currentHover: 1
-  };
-
   componentDidMount() {
     this.props.getPages();
   }
 
-  handleMouseOver(num) {
-    this.setState({ currentHover: num });
-  }
-
   render() {
-    const { pages } = this.props;
+    const { pages, hover } = this.props;
     return (
       <div className="PageCards">
         {pages.map(page => (
           <div className="individual-card" key={page._id}>
-            {this.state.currentHover === page.number ? (
+            {hover === page.number ? (
               <p className="page-title">{page.name}</p>
             ) : (
               <p className="page-title" />
             )}
             <Link
               to={page.URI}
-              onPointerOver={() => this.handleMouseOver(page.number)} 
-              onMouseOver={() => this.handleMouseOver(page.number)}
+              onPointerOver={() => this.props.handleMouseOver(page.number)} 
+              onMouseOver={() => this.props.handleMouseOver(page.number)}
             >
               <div
                 className={
-                  this.state.currentHover === page.number
+                  hover === page.number
                     ? "page-link page-border"
                     : "page-link"
                 }
@@ -57,11 +49,12 @@ class PageCards extends Component {
 }
 
 const mapStateToProps = state => ({
-  pages: state.pages.pagesToBeDisplayed
+  pages: state.pages.pagesToBeDisplayed,
+  hover: state.pages.currentHover
 });
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ getPages }, dispatch);
+  bindActionCreators({ getPages, handleMouseOver }, dispatch);
 
 export default connect(
   mapStateToProps,
