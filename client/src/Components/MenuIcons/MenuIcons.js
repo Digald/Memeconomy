@@ -15,11 +15,11 @@ below the pages component.
 */
 
 const MenuIcons = props => (
-  <div className="columns is-centered MenuIcons">
+  <div className="columns is-centered MenuIcons is-mobile">
     <IndividualIcon icon={message} alt="message bubble" name="Private Messages"/>
     <IndividualIcon icon={shopping} alt="shopping bag" name="Purchases"/>
     <IndividualIcon icon={photo} alt="photo frame" name="Collection" />
-    <IndividualIcon icon={brightness} alt="brightness icon" name="Hottest Memes"/>
+    <IndividualIcon icon={brightness} alt="brightness icon" name="TBD"/>
     <IndividualIcon icon={remote} alt="game controller" name="Account Settings"/>
     <IndividualIcon icon={onOff} alt="on/off button" name="Delete Account"/>
   </div>

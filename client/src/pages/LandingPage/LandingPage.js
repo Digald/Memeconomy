@@ -33,7 +33,7 @@ class LandingPage extends Component {
         <div className="columns">
           <PageCards />
         </div>
-        <Container fluid>
+        <Container>
           <div className="columns">
             <div className="column">
               <MenuIcons />

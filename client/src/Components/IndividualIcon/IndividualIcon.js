@@ -8,7 +8,7 @@ circular background.
 */
 
 const IndividualIcon = (props) => (
-    <div className="icon-whole-display column is-1-widescreen is-2 is-12-mobile">
+    <div className="icon-whole-display column">
         <div className="icon-wrap">
             <img className="icons" src={props.icon} alt={props.alt}/>
         </div>
