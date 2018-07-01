@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./MenuIcons.css";
 import IndividualIcon from "../IndividualIcon/IndividualIcon";
 import shopping from '../IndividualIcon/shopping.svg';

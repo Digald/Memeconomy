@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Level } from "reactbulma";
 import { Link } from "react-router-dom";
 import Moment from "react-moment";
+import MJ from './MJ.svg';
 import "./TopRightNav.css";
 
 /*
@@ -26,7 +27,7 @@ class TopRightNav extends Component {
       <div className="TopRightNav">
         <Level mobile>
           <Moment format="h : mm A">{this.state.time}</Moment>
-          <p>{this.props.currency || 0} MJ's</p>
+          <p>{this.props.currency || 0} <img className="meme-jewel-icon" src={MJ} alt="Meme Jewel Icon"/></p>
           {this.props.loggedIn ? (
             <p>User's Avatar here</p>
           ) : (
