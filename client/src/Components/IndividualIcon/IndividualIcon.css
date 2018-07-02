@@ -1,41 +1,57 @@
 .icon-whole-display {
-    width: auto;
+  width: auto;
 }
 .icon-wrap {
-    /* border: 1px solid black; */
-    margin: 0 auto;
-    border-radius: 50%;
-    padding: 20px;
-    background-color: white;
-    width: 100px;
-    height: auto;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 20px;
+  background-color: white;
+  width: 100px;
+  height: auto;
 }
 .icon-wrap-hover {
-    border: 4px solid cyan;
+  animation-name: borderChange;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .icons {
-   height: 50px;
+  height: 50px;
 }
 
 .icon-name {
-    width: auto;
-    padding-top: 15px;
+  color: turquoise;
+  font-weight: bold;
+  width: auto;
+  padding-top: 15px;
 }
 
 @media screen and (max-width: 769px) {
-    .icon-whole-display{
-        padding: 0;
-    }
-    .icon-wrap {
-        width: 50px;
-        padding: 10px;
-    }
-    
-    .icons {
-        height: 25px;
-    }
-    .icon-name {
-        font-size: 12px;
-    }
+  .icon-whole-display {
+    padding: 0;
+  }
+  .icon-wrap {
+    width: 50px;
+    padding: 10px;
+  }
+
+  .icons {
+    height: 25px;
+  }
+  .icon-name {
+    font-size: 12px;
+  }
+}
+
+@keyframes borderChange {
+  0% {
+    border: 4px solid cyan;
+  }
+  50% {
+    border: 4px solid turquoise;
+  }
+  100% {
+    border: 4px solid cyan;
+  }
 }
