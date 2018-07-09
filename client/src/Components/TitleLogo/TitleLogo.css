@@ -1,10 +1,17 @@
-.main-logo {
+.TitleLogo__logoWrap {
+    padding: 5px;
+    display: inline-block;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.TitleLogo__logoWrap__mainLogo {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-.main-title {
+.TitleLogo__mainTitle {
     display: inline-block;
     font-size: 32px;
     padding: 0 10px;
@@ -12,11 +19,3 @@
     color: #222222;
     font-weight: bold;
 } 
-
-.main-logo-wrap {
-    /* border: 2px solid black; */
-    padding: 5px;
-    display: inline-block;
-    background-color: red;
-    border-radius: 50%;
-}

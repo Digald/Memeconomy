@@ -1,8 +1,8 @@
-.icon-whole-display {
+.IndividualIcon {
   width: auto;
 }
-.icon-wrap {
-  /* border: 1px solid black; */
+
+.IndividualIcon__iconWrap {
   margin: 0 auto;
   border-radius: 50%;
   padding: 20px;
@@ -10,17 +10,18 @@
   width: 100px;
   height: auto;
 }
-.icon-wrap-hover {
+
+.IndividualIcon__iconWrap--hovered {
   animation-name: borderChange;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
-.icons {
+.IndividualIcon__iconWrap__icon {
   height: 50px;
 }
 
-.icon-name {
+.IndividualIcon__iconName{
   color: turquoise;
   font-weight: bold;
   width: auto;
@@ -28,18 +29,18 @@
 }
 
 @media screen and (max-width: 769px) {
-  .icon-whole-display {
+  .IndividualIcon {
     padding: 0;
   }
-  .icon-wrap {
+  .IndividualIcon__iconWrap {
     width: 50px;
     padding: 10px;
   }
 
-  .icons {
+  .IndividualIcon__iconWrap__icon {
     height: 25px;
   }
-  .icon-name {
+  .IndividualIcon__iconName {
     font-size: 12px;
   }
 }

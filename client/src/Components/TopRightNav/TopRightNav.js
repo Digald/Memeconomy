@@ -27,12 +27,12 @@ class TopRightNav extends Component {
       <div className="TopRightNav">
         <Level mobile>
           <Moment format="h : mm A">{this.state.time}</Moment>
-          <p>{this.props.currency || 0} <img className="meme-jewel-icon" src={MJ} alt="Meme Jewel Icon"/></p>
+          <p>{this.props.currency || 0} <img className="TopRightNav__memeJewel-icon" src={MJ} alt="Meme Jewel Icon"/></p>
           {this.props.loggedIn ? (
             <p>User's Avatar here</p>
           ) : (
             <Link to="/login">
-              <p className="login-link">Log In</p>
+              <p className="TopRightNav__loginLink">Log In</p>
             </Link>
           )}
         </Level>

@@ -12,10 +12,10 @@ const TitleLogo = () => (
   <div className="TitleLogo">
     <Level>
       <Link className="level" to="/">
-        <div className="main-logo-wrap level-item">
-          <img className="main-logo" src={logo} alt="my logo" />
+        <div className="TitleLogo__logoWrap level-item">
+          <img className="TitleLogo__logoWrap__mainLogo" src={logo} alt="Memeconomy's Logo" />
         </div>
-        <h1 className="main-title level-item">Memeconomy</h1>
+        <h1 className="TitleLogo__mainTitle level-item">Memeconomy</h1>
       </Link>
     </Level>
   </div>

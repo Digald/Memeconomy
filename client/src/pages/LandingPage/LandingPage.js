@@ -25,7 +25,7 @@ class LandingPage extends Component {
             <div className="column">
               <TitleLogo />
             </div>
-            <div className="column is-12-mobile is-4-tablet is-3-desktop is-2-fullhd topright-wrap">
+            <div className="column is-12-mobile is-4-tablet is-3-desktop is-2-fullhd">
               <TopRightNav />
             </div>
           </div>

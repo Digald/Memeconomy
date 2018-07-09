@@ -1,12 +1,13 @@
 .TopRightNav {
     font-weight: bold;
     color: #222222;
+    padding: 20px;
 }
 
-.login-link {
-    color: #222222;
-}
-
-.meme-jewel-icon {
+.TopRightNav__memeJewel-icon {
     width: 25px;
+}
+
+.TopRightNav__loginLink {
+    color: #222222;
 }
