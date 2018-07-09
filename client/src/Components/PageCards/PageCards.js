@@ -20,11 +20,11 @@ class PageCards extends Component {
     return (
       <div className="PageCards">
         {pages.map(page => (
-          <div className="individual-card" key={page._id}>
+          <div className="PageCards__individualCard" key={page._id}>
             {hover === page.number ? (
-              <p className="page-title">{page.name}</p>
+              <p className="PageCards__individualCard__pageTitle">{page.name}</p>
             ) : (
-              <p className="page-title" />
+              <p className="PageCards__individualCard__pageTitle" />
             )}
             <Link
               to={page.URI}
@@ -34,8 +34,8 @@ class PageCards extends Component {
               <div
                 className={
                   hover === page.number
-                    ? "page-link page-border"
-                    : "page-link"
+                    ? "PageCards__individualCard_pageLink PageCards__individualCard_pageLink--activeBorder"
+                    : "PageCards__individualCard_pageLink"
                 }
               >
                 {page.preview}

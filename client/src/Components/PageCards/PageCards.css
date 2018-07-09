@@ -1,4 +1,5 @@
 .PageCards {
+  margin-top: 50px;
   padding: 10px 95px;
   white-space: nowrap;
   display: block;
@@ -7,12 +8,12 @@
   width: 100%;
 }
 
-.individual-card {
+.PageCards__individualCard {
   display: inline-block;
   text-align: center;
 }
 
-.page-title {
+.PageCards__individualCard__pageTitle {
   font-size: 18px;
   margin: 0 0 10px 10px;
   font-weight: bold;
@@ -21,7 +22,7 @@
   height: 25px;
 }
 
-.page-link {
+.PageCards__individualCard_pageLink {
   border: 4px solid white;
   padding: 5px;
   height: 255px;
@@ -29,7 +30,7 @@
   margin: 0 7px;
 }
 
-.page-border {
+.PageCards__individualCard_pageLink--activeBorder {
   animation-name: borderChange;
   animation-duration: 1s;
   animation-iteration-count: infinite;

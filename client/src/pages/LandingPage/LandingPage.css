@@ -1,15 +1,9 @@
-html {
-    background-color: #EFEFEF;
-}
-body {
-    margin-top: 40px;
-    height: 100%;
-}
-
-.PageCards {
-    margin-top: 50px;
+.LandingPage {
+  padding-top: 40px;
+  height: 100%;
+  background-color: #efefef;
 }
 
 .topright-wrap {
-    padding: 20px;
+  padding: 20px;
 }

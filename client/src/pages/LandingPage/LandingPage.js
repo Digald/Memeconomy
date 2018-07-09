@@ -19,7 +19,7 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div className="page-wrapper">
+      <div className="LandingPage">
         <Container fluid>
           <div className="columns">
             <div className="column">
