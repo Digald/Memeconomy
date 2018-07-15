@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Level } from "reactbulma";
 import { Link } from "react-router-dom";
 import Moment from "react-moment";
-import MJ from './mj.svg';
+import MJ from './MJ.svg';
 import "./TopRightNav.css";
 
 /*

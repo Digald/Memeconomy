@@ -6,7 +6,7 @@ class LoginPage extends Component {
     document.title = "Sign into your account";
   }
   render() {
-    return <div>Hello World</div>;
+    return <div className="LoginPage">Hello World</div>;
   }
 }
 
