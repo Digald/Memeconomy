@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container } from "reactbulma";
 import "./LandingPage.css";
-import TitleLogo from "../../Components/TitleLogo/TitleLogo.js";
+import TitleLogo from "../../Components/TitleLogo/TitleLogo";
 import TopRightNav from "../../Components/TopRightNav/TopRightNav";
 import PageCards from "../../Components/PageCards/PageCards";
 import MenuIcons from "../../Components/MenuIcons/MenuIcons";

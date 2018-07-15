@@ -1,0 +1,21 @@
+.LoginPage {
+    background-color: #efefef;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.LoginPage__formContainer {
+    height: 500px;
+    width: 600px;
+    background-color: #FFF;
+    align-self: center;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+    .LoginPage__formContainer {
+        height: 100vh;
+        align-self: flex-start;
+    }
+}

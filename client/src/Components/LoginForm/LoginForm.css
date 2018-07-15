@@ -1,0 +1,38 @@
+.LoginForm {
+    padding: 20px;
+}
+
+.LoginForm__login-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.LoginForm__input-fields {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.LoginForm__input-fields label {
+    font-size: 18px;
+}
+
+.LoginForm__input-fields input {
+    height: 30px;
+    margin-bottom: 5%;
+}
+
+.LoginForm__input-fields button {
+    height: 40px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    background-color: red;
+    border: none;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    
+}
