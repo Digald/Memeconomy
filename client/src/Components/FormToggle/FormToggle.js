@@ -18,6 +18,7 @@ class FormToggle extends Component {
           className={
             "FormToggle__sign-in" + (loginIsToggled ? "" : " toggled-styles")
           }
+          onClick={loginIsToggled ? e => {} : e => this.props.toggleForm()}
         >
           <p>Log In</p>
         </div>
@@ -25,6 +26,7 @@ class FormToggle extends Component {
           className={
             "FormToggle__new-user" + (signupIsToggled ? "" : " toggled-styles")
           }
+          onClick={signupIsToggled ? e => {} : e => this.props.toggleForm()}
         >
           <p>Sign Up</p>
         </div>
