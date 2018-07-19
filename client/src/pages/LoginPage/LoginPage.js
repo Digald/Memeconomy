@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LoginForm from "../../Components/LoginForm/LoginForm";
+import FormToggle from '../../Components/FormToggle/FormToggle';
 import "./LoginPage.css";
 
 class LoginPage extends Component {
@@ -11,6 +12,7 @@ class LoginPage extends Component {
       <div className="LoginPage">
         <div className="LoginPage__formContainer">
           <LoginForm />
+          <FormToggle/>
         </div>
       </div>
     );

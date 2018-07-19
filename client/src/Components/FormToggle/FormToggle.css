@@ -1,0 +1,32 @@
+.FormToggle {
+    border-top: none;
+    /* height should equal 138px with .LoginForm's margin-bottom */
+    height: 75px;
+    display: flex;
+}
+
+.FormToggle__sign-in {
+    flex-grow: 1;
+    justify-content: center;
+    border-right: 0.5px solid black;
+    /* border-bottom: 1px solid black; */
+    /* border-left: 1px solid black; */
+    height: 100%;
+    display: flex;
+}
+
+.FormToggle__new-user {
+    background-color: red;
+    color: white;
+    box-shadow: inset 10px 10px 10px rgba(0,0,0,0.4);
+    flex-grow: 1;
+    justify-content: center;
+    height: 100%;
+    border-left: 0.5px solid black;
+    border-top: 1px solid black;
+    display: flex;
+}
+
+.FormToggle p {
+    align-self: center;
+}
