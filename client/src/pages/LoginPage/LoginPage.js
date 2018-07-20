@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import LoginForm from "../../Components/LoginForm/LoginForm";
-import FormToggle from '../../Components/FormToggle/FormToggle';
-import SignUpForm from '../../Components/SignUpForm/SignUpForm';
+import FormToggle from "../../Components/FormToggle/FormToggle";
+import SignUpForm from "../../Components/SignUpForm/SignUpForm";
 import "./LoginPage.css";
 
 class LoginPage extends Component {
@@ -9,16 +10,20 @@ class LoginPage extends Component {
     document.title = "Sign into your account";
   }
   render() {
+    const { loginIsToggled, signupIsToggled } = this.props;
     return (
       <div className="LoginPage">
         <div className="LoginPage__formContainer">
-          {/* <LoginForm /> */}
-          <SignUpForm/>
-          <FormToggle/>
+          {loginIsToggled ? <LoginForm /> : <SignUpForm />}
+          <FormToggle />
         </div>
       </div>
     );
   }
 }
 
-export default LoginPage;
+const mapStateToProps = state => ({
+  loginIsToggled: state.loginForm.loginIsToggled
+});
+
+export default connect(mapStateToProps)(LoginPage);
