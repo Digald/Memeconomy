@@ -1,0 +1,35 @@
+.SignUpForm {
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.SignUpForm__signup-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.SignUpForm__input-fields {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.SignUpForm__input-fields label {
+  font-size: 18px;
+}
+
+.SignUpForm__input-fields input {
+  height: 30px;
+  margin-bottom: 5%;
+}
+
+.SignUpForm__input-fields button {
+  height: 40px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: red;
+  border: none;
+  color: white;
+}

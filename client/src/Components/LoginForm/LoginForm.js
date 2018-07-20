@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./LoginForm.css";
 
 /* 
-This component will be the form that users will use to sign in if they already have an account.
+This component will be the form that users will use to sign in if they 
+already have an account.
 */
 
 class LoginForm extends Component {

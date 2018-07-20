@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LoginForm from "../../Components/LoginForm/LoginForm";
 import FormToggle from '../../Components/FormToggle/FormToggle';
+import SignUpForm from '../../Components/SignUpForm/SignUpForm';
 import "./LoginPage.css";
 
 class LoginPage extends Component {
@@ -11,7 +12,8 @@ class LoginPage extends Component {
     return (
       <div className="LoginPage">
         <div className="LoginPage__formContainer">
-          <LoginForm />
+          {/* <LoginForm /> */}
+          <SignUpForm/>
           <FormToggle/>
         </div>
       </div>
