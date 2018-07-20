@@ -10,7 +10,7 @@ class LoginPage extends Component {
     document.title = "Sign into your account";
   }
   render() {
-    const { loginIsToggled, signupIsToggled } = this.props;
+    const { loginIsToggled} = this.props;
     return (
       <div className="LoginPage">
         <div className="LoginPage__formContainer">
