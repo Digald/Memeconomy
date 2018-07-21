@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import validate from "validate.js";
+import userPost from "../../utils/user-post";
 import "./LoginForm.css";
 
 /* 
@@ -11,6 +13,35 @@ class LoginForm extends Component {
     email: "",
     password: ""
   };
+
+  submitForm(event) {
+    event.preventDefault();
+    const { email, password } = this.state;
+    const constraints = {
+      email: {
+        email: true
+      },
+      password: {
+        length: {
+          minimum: 6
+        }
+      }
+    };
+
+    const userData = {
+      email,
+      password
+    };
+
+    const validateEmail = validate({ email }, constraints);
+    const validatePass = validate({ password }, constraints);
+
+    if (!validatePass && !validateEmail) {
+      console.log("Passed all conditions, ready to POST");
+      userPost.userLogIn(userData);
+    }
+    return;
+  }
 
   handleInputChange(event) {
     const { name, value } = event.target;
@@ -25,7 +56,10 @@ class LoginForm extends Component {
         <h1 className="LoginForm__login-title">
           Sign Into An Existing Account
         </h1>
-        <form className="LoginForm__input-fields">
+        <form
+          className="LoginForm__input-fields"
+          onSubmit={event => this.submitForm(event)}
+        >
           <label>Email</label>
           <input
             name="email"

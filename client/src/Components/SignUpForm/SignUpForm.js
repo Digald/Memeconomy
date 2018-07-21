@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import validate from "validate.js";
+import userPost from "../../utils/user-post";
 import "./SignUpForm.css";
 
 /* 
@@ -16,7 +17,11 @@ class SignUpForm extends Component {
   };
 
   submitForm(event) {
+    /* When the form is submitted I validate every field before sending the 
+    submitted data to my server. */
     event.preventDefault();
+
+    const { email, displayName, password, confirmPass } = this.state;
     const constraints = {
       email: {
         email: true
@@ -27,20 +32,42 @@ class SignUpForm extends Component {
           maximum: 10
         }
       },
+      password: {
+        length: {
+          minimum: 6
+        }
+      },
       confirmPass: {
-        equality: "password",
+        equality: "password"
       }
     };
-    const validateEmail = validate({ email: this.state.email }, constraints);
-    const validateName = validate(
-      { displayName: this.state.displayName },
+
+    const userData = {
+      email,
+      displayName,
+      password,
+      confirmPass
+    };
+
+    const validateEmail = validate({ email }, constraints);
+    const validateName = validate({ displayName }, constraints);
+    const validateConfirmPass = validate(
+      { password, confirmPass },
       constraints
     );
-    const validatePass = validate(
-      { password: this.state.password, confirmPass: this.state.confirmPass },
-      constraints
-    );
-    console.log(validatePass);
+    const validatePass = validate({ password }, constraints);
+
+    if (
+      !validateEmail &&
+      !validateConfirmPass &&
+      !validateName &&
+      !validatePass
+    ) {
+      console.log("Pass all conditions, ready to POST");
+      userPost.userSignUp(userData);
+      return;
+    }
+    return;
   }
 
   handleInputChange(event) {
