@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import validate from "validate.js";
 import "./SignUpForm.css";
 
 /* 
@@ -14,6 +15,34 @@ class SignUpForm extends Component {
     confirmPass: ""
   };
 
+  submitForm(event) {
+    event.preventDefault();
+    const constraints = {
+      email: {
+        email: true
+      },
+      displayName: {
+        length: {
+          minimum: 3,
+          maximum: 10
+        }
+      },
+      confirmPass: {
+        equality: "password",
+      }
+    };
+    const validateEmail = validate({ email: this.state.email }, constraints);
+    const validateName = validate(
+      { displayName: this.state.displayName },
+      constraints
+    );
+    const validatePass = validate(
+      { password: this.state.password, confirmPass: this.state.confirmPass },
+      constraints
+    );
+    console.log(validatePass);
+  }
+
   handleInputChange(event) {
     const { name, value } = event.target;
     this.setState({
@@ -25,7 +54,10 @@ class SignUpForm extends Component {
     return (
       <div className="SignUpForm">
         <h1 className="SignUpForm__signup-title">Make A New Account</h1>
-        <form className="SignUpForm__input-fields">
+        <form
+          className="SignUpForm__input-fields"
+          onSubmit={event => this.submitForm(event)}
+        >
           <label>Email</label>
           <input
             name="email"
