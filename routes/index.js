@@ -9,11 +9,15 @@ const usersController = require("../controllers/usersController");
 router.get("/api/pages", pagesController.getPages);
 
 // GET routes
-router.get('/logout', usersController.logout);
-router.get('/profile', usersController.profile);
+router.get("/logout", usersController.logout);
+router.get("/profile", usersController.profile);
 
 // POST routes
-router.post("/signup", usersController.signup);
+router.post("/signup", passport.authenticate("local-signup"), {
+  successRedirect: "/profile",
+  failureRedirect: "/login",
+  failureFlash: true
+});
 router.post("/login", usersController.login);
 
 // serve html file for react
