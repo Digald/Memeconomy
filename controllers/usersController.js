@@ -1,3 +1,5 @@
+const path = require("path");
+
 exports.signup = async (req, res) => {
   console.log(req.body);
 };
@@ -13,5 +15,5 @@ exports.logout = (req, res) => {
 
 exports.profile = (req, res) => {
   console.log(req.user);
-  res.redirect("/profile");
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 };

@@ -12,6 +12,7 @@ import thunk from "redux-thunk";
 // File imports
 import LandingPage from "./pages/LandingPage/LandingPage";
 import LoginPage from './pages/LoginPage/LoginPage';
+import UserProfile from './pages/UserProfile/UserProfile';
 import "./App.css";
 
 // Middleware logger is only for development purposes. It should be deleted close to production so that it doesn't clog up the console with redux logs.
@@ -31,6 +32,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/login" component={LoginPage}/>
+            <Route exact path="/profile" component={UserProfile}/>
           </Switch>
         </Router>
       </Provider>
