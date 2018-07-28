@@ -15,5 +15,4 @@ exports.logout = (req, res) => {
 
 exports.profile = (req, res) => {
   console.log(req.user);
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 };

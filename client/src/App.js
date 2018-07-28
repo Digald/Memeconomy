@@ -1,6 +1,6 @@
 // Package and library imports
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import "bulma/css/bulma.css";
 // Redux imports
 import rootReducer from "./rootReducer";
@@ -11,8 +11,8 @@ import logger from "redux-logger";
 import thunk from "redux-thunk";
 // File imports
 import LandingPage from "./pages/LandingPage/LandingPage";
-import LoginPage from './pages/LoginPage/LoginPage';
-import UserProfile from './pages/UserProfile/UserProfile';
+import LoginPage from "./pages/LoginPage/LoginPage";
+import UserProfile from "./pages/UserProfile/UserProfile";
 import "./App.css";
 
 // Middleware logger is only for development purposes. It should be deleted close to production so that it doesn't clog up the console with redux logs.
@@ -31,8 +31,8 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={LandingPage} />
-            <Route exact path="/login" component={LoginPage}/>
-            <Route exact path="/profile" component={UserProfile}/>
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/profile" component={UserProfile} />
           </Switch>
         </Router>
       </Provider>

@@ -24,7 +24,7 @@ router.post(
 router.post("/login", usersController.login);
 
 // serve html file for react
-router.use(function(req, res) {
+router.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
