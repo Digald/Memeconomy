@@ -26,18 +26,20 @@ app.use(express.static("client/build"));
 app.use(passport.initialize());
 
 // Load passport strategies
-const localSignUpStragegy = require('./config/local-signup');
-const localLoginStrategy = require('./config/local-login');
-passport.use('local-signup', localSignUpStragegy);
-passport.use('local-login', localLoginStrategy);
+const localSignUpStragegy = require("./config/local-signup");
+const localLoginStrategy = require("./config/local-login");
+passport.use("local-signup", localSignUpStragegy);
+passport.use("local-login", localLoginStrategy);
 
 // Pass the authentication check middleware
-// const authCheckMiddleware = require('./auth-check');
-// app.use('/api', authCheckMiddleware);
+const authCheckMiddleware = require("./middleware/auth-check");
+app.use("/api", authCheckMiddleware);
 
 // Add routes, both API and view
 const routes = require("./routes/routes");
+const apiRoutes = require("./routes/apiRoutes");
 app.use("/", routes);
+app.use("/api", apiRoutes);
 
 // Start the API server
 app.listen(PORT, function() {
