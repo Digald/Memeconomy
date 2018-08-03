@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const passport = require("passport");
+const path = require("path");
 // Express specific
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -40,6 +41,10 @@ const routes = require("./routes/routes");
 const apiRoutes = require("./routes/apiRoutes");
 app.use("/", routes);
 app.use("/api", apiRoutes);
+// Default route to serve html file for react client
+// app.use("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
 
 // Start the API server
 app.listen(PORT, function() {
