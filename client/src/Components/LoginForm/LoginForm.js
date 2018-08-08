@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import validate from "validate.js";
 import userPost from "../../utils/user-post";
 import "./LoginForm.css";
+import Redirect from "../../../node_modules/react-router-dom/Redirect";
 
 /* 
 This component will be the form that users will use to sign in if they 

@@ -1,7 +1,13 @@
 // Package and library imports
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import "bulma/css/bulma.css";
+import Auth from "./utils/Auth";
 // Redux imports
 import rootReducer from "./rootReducer";
 import { Provider } from "react-redux";
@@ -33,6 +39,14 @@ class App extends Component {
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/profile" component={UserProfile} />
+            <Route
+              exact
+              path="/logout"
+              onEnter={(nextState, replace) => {
+                Auth.deauthenticateUser();
+                replace("/");
+              }}
+            />
           </Switch>
         </Router>
       </Provider>

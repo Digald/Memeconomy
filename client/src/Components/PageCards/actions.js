@@ -5,7 +5,7 @@ export const UPDATE_CARD = "UPDATE_CARD";
 
 export function getPages() {
   return async function(dispatch) {
-    const res = await axios.get("/api/pages");
+    const res = await axios.get("/get/pages");
     const pages = await res.data;
     return dispatch({
       type: "GET_PAGES",

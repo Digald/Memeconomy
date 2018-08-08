@@ -4,7 +4,7 @@ const pagesController = require("../controllers/pagesController");
 const usersController = require("../controllers/usersController");
 
 // API GET routes
-router.get("/api/pages", pagesController.getPages);
+router.get("/get/pages", pagesController.getPages);
 
 // User POST routes
 router.post("/signup", usersController.signup);
